@@ -46,4 +46,4 @@ mvn install assembly:assembly
 java -cp target/dlr-1.0.0-jar-with-dependencies.jar com.dynamsoft.dlr.Test images/1.png <optional: license key>
 ```
 
-![Java passport MRZ detector](https://www.dynamsoft.com/codepool/img/2022/12/java-mrz-ocr-passport.png)
+![Java passport MRZ detector](https://www.dynamsoft.com/codepool/img/2022/12/java-mrz-ocr-passport-windows-linux.png)
