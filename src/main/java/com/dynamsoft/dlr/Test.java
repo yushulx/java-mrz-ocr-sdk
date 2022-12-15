@@ -1,5 +1,7 @@
 package com.dynamsoft.dlr;
 import java.util.ArrayList;
+import java.util.Set;
+
 import javax.imageio.ImageIO;
 
 import com.google.gson.JsonObject;
@@ -36,7 +38,6 @@ public class Test {
 					lines[i] = results.get(i).text;
 				}
 				JsonObject info = MrzParser.parse(lines);
-				System.out.println(info.toString());
 				
 				BufferedImage image = null;
 				try
@@ -58,8 +59,15 @@ public class Test {
 						graphics2D.drawLine(result.x2, result.y2, result.x3, result.y3);
 						graphics2D.drawLine(result.x3, result.y3, result.x4, result.y4);
 						graphics2D.drawLine(result.x4, result.y4, result.x1, result.y1);
-						
-						// graphics2D.drawString(result.text, result.x1, result.y1 - 10);
+					}
+
+					Set<String> keys = info.keySet();
+					int y = 10;
+					for (String key : keys) {
+						String kv = key + ": " + info.get(key).getAsString();
+						System.out.println(kv);
+						graphics2D.drawString(kv, 10, y);
+						y += 20;
 					}
 					
 					graphics2D.dispose();
