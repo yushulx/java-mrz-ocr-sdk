@@ -1,4 +1,4 @@
-# Java Document Scanner SDK for Windows and Linux
+# Java MRZ OCR SDK for Windows and Linux
 The repository is a Java wrapper for [Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/overview/). It aims to help developers build Java applications to detect machine-readable zones (MRZ) in passports, travel documents, and ID cards. The Jar package can work on Windows and Linux.
 
 ## License Key

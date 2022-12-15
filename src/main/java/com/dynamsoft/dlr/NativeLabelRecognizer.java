@@ -1,11 +1,9 @@
 package com.dynamsoft.dlr;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import com.google.gson.*;
 
@@ -16,7 +14,7 @@ public class NativeLabelRecognizer {
 	static {
 		try {
 			if (NativeLoader.load()) {
-				System.out.println("Successfully loaded Dynamsoft Document Normalizer.");
+				System.out.println("Successfully loaded Dynamsoft Label Recognizer.");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
