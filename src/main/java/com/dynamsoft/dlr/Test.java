@@ -1,6 +1,9 @@
 package com.dynamsoft.dlr;
 import java.util.ArrayList;
 import javax.imageio.ImageIO;
+
+import com.google.gson.JsonObject;
+
 import java.awt.image.BufferedImage;
 import java.awt.*;
 import java.io.File;
@@ -26,7 +29,15 @@ public class Test {
 			System.out.println("Version number: " + labelRecognizer.getVersion());
 			ret = labelRecognizer.loadModel();
 			ArrayList<MrzResult> results = (ArrayList<MrzResult>)labelRecognizer.detectFile(fileName);
+			
 			if (results != null) {
+				String[] lines = new String[results.size()];
+				for (int i = 0; i < results.size(); i++) {
+					lines[i] = results.get(i).text;
+				}
+				JsonObject info = MrzParser.parse(lines);
+				System.out.println(info.toString());
+				
 				BufferedImage image = null;
 				try
 				{
