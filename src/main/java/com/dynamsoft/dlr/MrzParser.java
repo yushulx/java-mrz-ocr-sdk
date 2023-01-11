@@ -49,7 +49,7 @@ public class MrzParser {
             }
 
             // Get issuing State infomation
-            String  nation = line1.substring(2, 7);
+            String  nation = line1.substring(2, 5);
             pattern = Pattern.compile("[0-9]");
             matcher = pattern.matcher(nation);
             if (matcher.matches()) return null;
