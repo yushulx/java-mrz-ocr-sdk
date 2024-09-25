@@ -2,7 +2,7 @@
 The repository is a Java wrapper for [Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/overview/). It aims to help developers build Java applications to detect machine-readable zones (MRZ) in passports, travel documents, and ID cards. The Jar package can work on Windows and Linux.
 
 ## License Key
-Apply for a [30-day free trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dlr).
+Apply for a [30-day free trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform).
 
 ## JNI Header Generation
 
